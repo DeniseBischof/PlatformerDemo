@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown("Pause")) //Choose Button here
         {
             paused = !paused;
         }
@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour {
         if (paused)
         {
             PauseUI.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 0; // to stop everything else from moving, it "freezes" the scene
         }
 
         if (!paused)
@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void Restart()
     {
-        Application.LoadLevel(Application.loadedLevel); //ich war lazy
+        Application.LoadLevel(Application.loadedLevel); //I was lazy. This siply restarts the level.
     }
 
     public void Quit()
